@@ -78,7 +78,7 @@ when 'init'
   puts "You can now add accounts to the keychain with:"
   puts "    #{$0} add"
 
-when 'ls'
+when 'ls', 'list'
   keychain = load_keychain
   keychain.generic_passwords.all.sort {|a,b|
     a.attributes[:label] <=> b.attributes[:label]
